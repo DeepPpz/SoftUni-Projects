@@ -15,7 +15,6 @@ while True:
         inventory[product] += int(quantity)
 
 print("Products in stock:")
-for (product, quantity) in inventory.items():
-    print(f"- {product}: {quantity}")
+[print(f"- {product}: {quantity}") for (product, quantity) in inventory.items()]
 print(f"Total Products: {len(inventory)}")
 print(f"Total Quantity: {sum(inventory.values())}")
