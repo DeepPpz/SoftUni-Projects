@@ -1,36 +1,68 @@
-import sys
-n = int(input())
+# Created by: Georgi Tashev AKA xaoccc
 
-odd_sum, even_sum = 0, 0
-odd_min, even_min = sys.maxsize, sys.maxsize
-odd_max, even_max = - sys.maxsize, - sys.maxsize
-odd_flag, even_flag = True, True
+# input
+inputs_count = int(input())
+number_sum_even = 0
+number_sum_odd = 0
+max_num_even = -100000.00
+max_num_odd = -100000.00
+min_num_even = 100000.00
+min_num_odd = 100000.00
 
-for i in range(1, n + 1):
-    num = float(input())
-
+# logic
+for i in range(1, inputs_count + 1):
+    number = float(input())
     if i % 2 == 0:
-        even_flag = False
-        even_sum += num
-        if even_max < num: even_max = num
-        if even_min > num: even_min = num
-    else:
-        odd_flag = False
-        odd_sum += num
-        if odd_max < num: odd_max = num
-        if odd_min > num: odd_min = num
+        number_sum_even += number
+        if number > max_num_even:
+            max_num_even = number
+        if number < min_num_even:
+            min_num_even = number
+    elif i % 2 != 0:
+        number_sum_odd += number
+        if number > max_num_odd:
+            max_num_odd = number
+        if number < min_num_odd:
+            min_num_odd = number
 
-print(f'OddSum={odd_sum},')
-if odd_flag:
-    print('OddMin=No,')
-    print('OddMax=No,')
-else:
-    print(f'OddMin={odd_min},')
-    print(f'OddMax={odd_max},')
-print(f'EvenSum={even_sum},')
-if even_flag:
-    print('EvenMin=No,')
-    print('EvenMax=No')
-else:
-    print(f'EvenMin={even_min},')
-    print(f'EvenMax={even_max:}')
+if number_sum_odd != 0:
+    if number_sum_odd.is_integer():
+        number_sum_odd = int(number_sum_odd)
+if number_sum_even != 0:
+    if number_sum_even.is_integer():
+        number_sum_even = int(number_sum_even)
+if min_num_odd != 0:
+    if min_num_odd.is_integer():
+        min_num_odd = int(min_num_odd)
+if max_num_odd != 0:
+    if max_num_odd.is_integer():
+        max_num_odd = int(max_num_odd)
+if min_num_even != 0:
+    if min_num_even.is_integer():
+        min_num_even = int(min_num_even)
+if max_num_even != 0:
+    if max_num_even.is_integer():
+        max_num_even = int(max_num_even)
+
+number_sum_odd_print = f"OddSum={number_sum_odd},"
+number_sum_even_print = f"EvenSum={number_sum_even},"
+min_num_odd_print = f"OddMin={min_num_odd},"
+max_num_odd_print = f"OddMax={max_num_odd},"
+min_num_even_print = f"EvenMin={min_num_even},"
+max_num_even_print = f"EvenMax={max_num_even}"
+if inputs_count == 1:
+    min_num_even_print = "EvenMin=No,"
+    max_num_even_print = "EvenMax=No"
+elif inputs_count == 0:
+    min_num_even_print = "EvenMin=No,"
+    max_num_even_print = "EvenMax=No"
+    min_num_odd_print = "OddMin=No,"
+    max_num_odd_print = "OddMax=No,"
+
+# print output
+print(number_sum_odd_print)
+print(min_num_odd_print)
+print(max_num_odd_print)
+print(number_sum_even_print)
+print(min_num_even_print)
+print(max_num_even_print)
