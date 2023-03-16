@@ -151,7 +151,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-/Random Demos/
+/RandomDemos/
 Other/mysql_connection.py
 Other/singing.py
 RandomDemos/demo_1.py
