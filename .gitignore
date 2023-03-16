@@ -154,3 +154,4 @@ cython_debug/
 /Random Demos/
 Other/mysql_connection.py
 Other/singing.py
+RandomDemos/demo_1.py
