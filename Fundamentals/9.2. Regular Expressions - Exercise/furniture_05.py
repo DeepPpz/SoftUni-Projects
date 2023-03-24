@@ -9,7 +9,8 @@ while True:
 
     if data == 'Purchase':
         print("Bought furniture:")
-        print(*furniture, sep="\n")
+        if len(furniture) > 0:
+            print(*furniture, sep="\n")
         print(f"Total money spend: {total_cost:.2f}")
         exit()
 
