@@ -34,14 +34,18 @@ for (lang, stud) in end_results.items():
     for s in stud:
         best_results[s] += sum(stud.values())
 
-rank_dict = dict(sorted(best_results.items(), key=lambda x: -x[0]))
+rank_dict = dict(sorted(best_results.items(), key=lambda x: -x[1]))
 
 best_candidate = next(iter(rank_dict.items()))
 print(f"Best candidate is {best_candidate[0]} with total {best_candidate[1]} points.")
 print("Ranking:")
 
-#sorted_dict =
+for i in end_results:
+    end_results[i] = dict(sorted(end_results[i].items(), key=lambda x: x[0]))
+print(end_results)
+
 
 for (lang, stud) in end_results.items():
-    for (k, v) in value.items():
-        print(f"{k} - {key} - {v}")
+    print(f"{stud}")
+    for (k, v) in stud.items():
+        print(f"#  {lang} - {v}")
