@@ -14,8 +14,7 @@ while True:
 
     if valid_order:
         customer = valid_order.group("cust").strip("%")
-        product = valid_order.group("prod").lstrip("<")
-        product = product.rstrip(">")
+        product = valid_order.group("prod").lstrip("<").rstrip(">")
         total_price = float(valid_order.group("count").strip("|")) * float(valid_order.group("price").rstrip("$"))
 
         total_income += total_price
