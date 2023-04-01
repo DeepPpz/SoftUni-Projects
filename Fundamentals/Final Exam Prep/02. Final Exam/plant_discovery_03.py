@@ -27,7 +27,7 @@ while True:
         if plant not in exhibition:
             print("error")
         else:
-            exhibition[plant]["rarity"] = rarity
+            exhibition[plant]["rarity"] = int(rarity)
 
     elif command[0] == "Reset":
         plant = command[1]
@@ -38,7 +38,7 @@ while True:
 
 print("Plants for the exhibition:")
 for plant in exhibition:
-    if len(exhibition[plant]["rating"])!= 0:
+    if len(exhibition[plant]["rating"]) != 0:
         avg_rating = sum(exhibition[plant]["rating"]) / len(exhibition[plant]["rating"])
     else:
         avg_rating = 0
