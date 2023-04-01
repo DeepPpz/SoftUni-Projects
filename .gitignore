@@ -153,4 +153,5 @@ cython_debug/
 
 
 # personal ignores
-/RandomDemos/
+/ZZ-Demos/
+/ZZ-Helpers/
