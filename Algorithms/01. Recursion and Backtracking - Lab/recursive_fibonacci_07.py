@@ -17,4 +17,4 @@ def iterative_fibonacci(num):
 
 num = int(input())
 
-print(iterative_fibonnaci(num))
+print(iterative_fibonacci(num))
