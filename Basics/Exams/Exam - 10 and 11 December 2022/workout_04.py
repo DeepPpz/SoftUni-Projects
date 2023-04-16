@@ -5,6 +5,7 @@ first_day = float(input())
 
 day_km = 0
 total_km = 0
+goal_flag = False
 
 for days in range(0, n_days + 1):
     if days == 0:
