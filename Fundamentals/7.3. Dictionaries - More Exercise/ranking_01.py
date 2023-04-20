@@ -1,3 +1,5 @@
+# not ready
+
 contests = {}
 end_results = {}
 best_results = {}
