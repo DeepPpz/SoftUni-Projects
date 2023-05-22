@@ -1,10 +1,10 @@
 from collections import deque
 
 
-def is_out_of_range(row, col, rows, cols):
-    if row < 0 or row >= rows:
+def is_out_of_range(row, col, size):
+    if row < 0 or row >= size:
         return True
-    elif col < 0 or col >= cols:
+    elif col < 0 or col >= size:
         return True
     return False
 
@@ -17,8 +17,8 @@ def print_exit(row, col, coals):
         print(f"{total_coals - coals} pieces of coal left.", coordinates)
 
 
-def find_path(r, c, rows, cols, coals_collected, field, move=tuple()):
-    if is_out_of_range(r, c, rows, cols):
+def find_path(r, c, size, coals_collected, field, move):
+    if is_out_of_range(r, c, size):
         r = r - move[0]
         c = c - move[1]
     elif field[r][c] == "e":
@@ -33,16 +33,12 @@ def find_path(r, c, rows, cols, coals_collected, field, move=tuple()):
         return
     else:
         move = directions[movements.popleft()]
-        find_path(r + move[0], c + move[1], rows, cols, coals_collected, field, move)
+        find_path(r + move[0], c + move[1], size, coals_collected, field, move)
 
 
 size = int(input())
 movements = deque([x for x in input().split()])
 field = list([[x for x in input().split()] for _ in range(size)])
-total_coals = 0
-coals_collected = 0
-miner = tuple()
-
 directions = {
     "left": (0, -1),
     "right": (0, 1),
@@ -50,10 +46,12 @@ directions = {
     "down": (1, 0)
 }
 
+total_coals = 0
+miner = tuple()
 for row in range(size):
     if "c" in field[row]:
         total_coals += field[row].count("c")
     if "s" in field[row]:
         miner = (row, field[row].index("s"))
 
-find_path(miner[0], miner[1], size, size, coals_collected, field)
+find_path(miner[0], miner[1], size, 0, field, tuple())
