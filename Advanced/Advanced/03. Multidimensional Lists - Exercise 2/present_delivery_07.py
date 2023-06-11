@@ -4,7 +4,7 @@ def in_range(i, j):
 
 presents = int(input())
 SIZE = int(input())
-neighborhood = list([[x for x in input().split()] for _ in range(SIZE)])
+neighborhood = [[x for x in input().split()] for _ in range(SIZE)]
 kids_presents = 0
 directions = {
     'up': (-1, 0),
