@@ -1,6 +1,5 @@
 from collections import deque
 
-
 all_textiles = deque([int(x) for x in input().split()])
 all_medicaments = deque([int(x) for x in input().split()])
 items_resources = {
