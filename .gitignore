@@ -157,3 +157,4 @@ cython_debug/
 /ZZ-Demos/
 /ZZ-Helpers/
 *.zip
+/.vscode/
