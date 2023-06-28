@@ -1,6 +1,6 @@
 def find_characters_in_range(a, b):
     chars = []
-    for i in range(ord(a) +1, ord(b)):
+    for i in range(ord(a) + 1, ord(b)):
         chars.append(chr(i))
     return chars
 

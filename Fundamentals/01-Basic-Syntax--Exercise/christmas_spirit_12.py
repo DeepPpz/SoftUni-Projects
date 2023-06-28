@@ -3,7 +3,7 @@ days_left = int(input())
 
 total_cost, total_spirit = 0, 0
 
-for day in range(1, days_left +1):
+for day in range(1, days_left + 1):
     if day % 11 == 0:
         quantity += 2
     if day % 10 == 0:

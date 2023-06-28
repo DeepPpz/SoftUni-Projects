@@ -1,6 +1,6 @@
 n = int(input())
 
-for number in range(1, n+1):
+for number in range(1, n + 1):
     total_sum, num = 0, number
     special_flag = False
 
