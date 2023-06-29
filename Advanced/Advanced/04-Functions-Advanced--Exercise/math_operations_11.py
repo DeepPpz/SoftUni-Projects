@@ -11,7 +11,7 @@ def math_operations(*args, **letters_data):
         else:
             letters_data['a'] += args[i]
 
-    sorted_letters = dict(sorted(letters_data.items(), key= lambda x: (-x[1], x[0])))
+    sorted_letters = dict(sorted(letters_data.items(), key=lambda x: (-x[1], x[0])))
     result = ""
     for (key, value) in sorted_letters.items():
         result += f"{key}: {value:.1f}\n"

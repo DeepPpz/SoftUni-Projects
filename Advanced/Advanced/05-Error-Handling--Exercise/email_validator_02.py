@@ -2,7 +2,7 @@ import re
 
 
 class NameTooShortError(Exception):
-    """Raised when the name in the email is less than or equal to the minimum."""
+    """Raised when the name in the email is less than the minimum."""
     pass
 
 
