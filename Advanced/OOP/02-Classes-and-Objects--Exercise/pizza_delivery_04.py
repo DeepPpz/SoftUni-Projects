@@ -32,14 +32,3 @@ class PizzaDelivery:
             self.ordered = True
             ingredients = ', '.join(f'{key}: {value}' for (key, value) in self.ingredients.items())
             return f'You\'ve ordered pizza {self.name} prepared with {ingredients} and the price will be {self.price}lv.'
-
-
-# margarita = PizzaDelivery('Margarita', 11, {'cheese': 2, 'tomatoes': 1})
-# margarita.add_extra('mozzarella', 1, 0.5)
-# margarita.add_extra('cheese', 1, 1)
-# margarita.remove_ingredient('cheese', 1, 1)
-# print(margarita.remove_ingredient('bacon', 1, 2.5))
-# print(margarita.remove_ingredient('tomatoes', 2, 0.5))
-# margarita.remove_ingredient('cheese', 2, 1)
-# print(margarita.make_order())
-# print(margarita.add_extra('cheese', 1, 1))

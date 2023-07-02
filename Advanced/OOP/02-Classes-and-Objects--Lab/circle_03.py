@@ -14,9 +14,3 @@ class Circle:
     def get_circumference(self):
         circumference = 2 * Circle.pi * self.radius
         return circumference
-
-
-# circle = Circle(10)
-# circle.set_radius(12)
-# print(circle.get_area())
-# print(circle.get_circumference())

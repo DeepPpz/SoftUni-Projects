@@ -9,8 +9,3 @@ class Music:
 
     def play(self):
         return self.lyrics
-
-
-# song = Music("Title", "Artist", "Lyrics")
-# print(song.print_info())
-# print(song.play())

@@ -19,12 +19,3 @@ class Smartphone:
 
     def status(self):
         return f'Total apps: {len(self.apps)}. Memory left: {self.memory}'
-
-
-# smartphone = Smartphone(100)
-# print(smartphone.install("Facebook", 60))
-# smartphone.power()
-# print(smartphone.install("Facebook", 60))
-# print(smartphone.install("Messenger", 20))
-# print(smartphone.install("Instagram", 40))
-# print(smartphone.status())
