@@ -28,7 +28,7 @@ def generate_spotify_links(artist, title):
 db_host = "localhost"
 db_name = "spotify_generator_test"
 db_user = "postgres"
-db_password = "0000"
+db_password = "******"
 connection = None
 
 try:

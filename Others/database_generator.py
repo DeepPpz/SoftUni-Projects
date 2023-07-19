@@ -27,7 +27,7 @@ def extract_info_from_files(main_folder, connection, cursor):
 db_host = "localhost"
 db_name = "spotify_generator_test"
 db_user = "postgres"
-db_password = "0000"
+db_password = "******"
 connection = None
 
 try:
