@@ -4,7 +4,6 @@ import unittest
 
 class RobotTest(unittest.TestCase):
     def setUp(self) -> None:
-        # __init__(self, robot_id: str, category: str, capacity: int, price: float):
         self.robot = Robot("R2-D2", "Military", 50, 1)
     
     def test_initialization_valid_values(self):
