@@ -16,6 +16,7 @@ You can also find solutions to the Open courses:
 
 
 In PythonBook, you can find all the solutions to the SoftUni book "Programming Basics with Python".
+
 In addition, there are a few random codes you can find in Others.
 
-Enjoy and (maybe) use it only for inspiration. ;)
+Enjoy and (maybe) use it only for inspiration. ^_^
