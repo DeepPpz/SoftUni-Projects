@@ -5,7 +5,7 @@ Here you can find various solutions for the SoftUni tasks:
 - Programming Fundamentals with Python;
 - Python Web Developer Modules:
     - Python Advanced;
-    - Python DB (coming soon);
+    - Python DB;
     - Python Web (coming next year);
     - JS Front-End (coming next year);
 
