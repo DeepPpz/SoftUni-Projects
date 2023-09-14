@@ -4,27 +4,27 @@ CREATE DATABASE gamebar;
 
 -- 01. Create Tables.
 CREATE TABLE employees (
-	id SERIAL PRIMARY KEY,
-	first_name VARCHAR(30),
-	last_name VARCHAR(50),
-	hiring_date DATE DEFAULT '2023-01-01',
-	salary DECIMAL(10, 2),
-	devices_number INT
-	);
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(30),
+    last_name VARCHAR(50),
+    hiring_date DATE DEFAULT '2023-01-01',
+    salary DECIMAL(10, 2),
+    devices_number INT
+);
 
 CREATE TABLE departments (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(50),
 	code CHAR(3),
 	description TEXT
-	);
+);
 
 CREATE TABLE issues (
 	id SERIAL PRIMARY KEY,
 	description VARCHAR(150),
 	"date" DATE,
 	"start" TIMESTAMP
-	);
+);
 
 
 -- 02. Insert Data in Tables.

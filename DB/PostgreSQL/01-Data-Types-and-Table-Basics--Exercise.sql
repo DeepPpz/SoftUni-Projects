@@ -7,7 +7,7 @@ CREATE TABLE minions (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(30),
 	age INT
-	);
+);
 
 
 -- 02. Rename the Table.
@@ -34,7 +34,12 @@ ALTER TABLE minions_info
 
 
 -- 06. Create ENUM Type.
-CREATE TYPE type_mood AS ENUM ('happy', 'relaxed', 'stressed', 'sad');
+CREATE TYPE type_mood AS ENUM (
+	'happy',
+	'relaxed',
+	'stressed',
+	'sad'
+);
 
 ALTER TABLE minions_info 
 	ADD COLUMN mood type_mood;
@@ -79,7 +84,7 @@ CREATE TABLE minions_birthdays (
 	age INT,
 	present VARCHAR(100),
 	party TIMESTAMPTZ
-	);
+);
 
 
 -- 13. Insert Into.
@@ -95,7 +100,10 @@ INSERT INTO minions_info (name, code, task, banana, email, equipped, mood)
 
 
 -- 14. Select.
-SELECT name, task, email, banana
+SELECT name,
+		task,
+		email,
+		banana
 	FROM minions_info;
 
 
