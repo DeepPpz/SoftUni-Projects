@@ -45,8 +45,9 @@ SELECT * FROM employees;
 
 
 -- 07. Top Paid Employee View.
-CREATE VIEW vw_toppaidemployee AS
+CREATE VIEW view_top_paid_employee AS
 	SELECT * FROM employees
-	ORDER BY salary DESC LIMIT 1;
+	ORDER BY salary DESC
+		LIMIT 1;
 
-SELECT * FROM vw_toppaidemployee;
+SELECT * FROM view_top_paid_employee;
