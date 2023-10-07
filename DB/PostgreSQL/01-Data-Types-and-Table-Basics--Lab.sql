@@ -2,6 +2,7 @@
 CREATE DATABASE gamebar;
 
 
+
 -- 01. Create Tables.
 CREATE TABLE employees (
     id SERIAL PRIMARY KEY,
@@ -12,12 +13,14 @@ CREATE TABLE employees (
     devices_number INT
 );
 
+
 CREATE TABLE departments (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(50),
 	code CHAR(3),
 	description TEXT
 );
+
 
 CREATE TABLE issues (
 	id SERIAL PRIMARY KEY,
@@ -27,18 +30,21 @@ CREATE TABLE issues (
 );
 
 
+
 -- 02. Insert Data in Tables.
 	-- * not in Judge
 INSERT INTO employees (first_name, last_name)
-	VALUES
-		('Petar', 'Petrov'),
-		('Ivan', 'Ivanov'),
-		('Dimitar', 'Dimitrov');
+VALUES
+	('Petar', 'Petrov'),
+	('Ivan', 'Ivanov'),
+	('Dimitar', 'Dimitrov');
+
 
 
 -- 03. ALter Tables.
 ALTER TABLE employees
 	ADD COLUMN middle_name VARCHAR(50);
+
 
 
 -- 04. Add Constraints.
@@ -48,14 +54,19 @@ ALTER TABLE employees
 	ALTER COLUMN hiring_date SET NOT NULL;
 
 
+
 -- 05. Modify Columns.
 ALTER TABLE employees 
 	ALTER COLUMN middle_name TYPE VARCHAR(100);
+
 
 
 -- 06. Truncate Tables.
 TRUNCATE TABLE issues;
 
 
+
 -- 07. Drop Tables.
 DROP TABLE departments;
+
+

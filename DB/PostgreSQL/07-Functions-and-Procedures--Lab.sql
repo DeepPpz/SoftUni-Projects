@@ -28,15 +28,18 @@ CREATE PROCEDURE sp_increase_salaries(department_name VARCHAR(50))
 AS $$
 
 BEGIN
-	UPDATE employees AS e
-	SET salary = salary * 1.05
-	WHERE department_id = (
-		SELECT 
-			department_id
-		FROM
-			departments
-		WHERE
-			name = department_name
+	UPDATE 
+		employees AS e
+	SET 
+		salary = salary * 1.05
+	WHERE 
+		department_id = (
+			SELECT 
+				department_id
+			FROM
+				departments
+			WHERE
+				name = department_name
 		);
 END;
 
@@ -59,9 +62,12 @@ BEGIN
 		) <> 1 THEN
 		ROLLBACK;
 	ELSE
-		UPDATE employees
-		SET salary = salary * 1.05
-		WHERE employee_id = id;
+		UPDATE 
+			employees
+		SET 
+			salary = salary * 1.05
+		WHERE 
+			employee_id = id;
 	END IF;
 
 	COMMIT;

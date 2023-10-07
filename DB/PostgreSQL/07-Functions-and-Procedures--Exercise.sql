@@ -216,9 +216,12 @@ BEGIN
 		) <> 1 THEN 
 		ROLLBACK;
 	ELSE
-		UPDATE accounts
-		SET balance = balance + money_amount
-		WHERE id = account_id;
+		UPDATE 
+			accounts
+		SET 
+			balance = balance + money_amount
+		WHERE 
+			id = account_id;
 	END IF;
 
 	COMMIT;
@@ -242,9 +245,12 @@ BEGIN
 			id = account_id
 		) >= money_amount
 	THEN
-		UPDATE accounts
-		SET balance = balance - money_amount
-		WHERE id = account_id;
+		UPDATE 
+			accounts
+		SET 
+			balance = balance - money_amount
+		WHERE 
+			id = account_id;
 	ELSE
 		RAISE NOTICE 'NOTICE: Insufficient balance to withdraw %', money_amount;
 		ROLLBACK;
@@ -295,7 +301,7 @@ CREATE TABLE logs (
 	account_id INT,
 	old_sum NUMERIC(20,4),
 	new_sum NUMERIC(20,4)
-	);
+);
 
 
 CREATE OR REPLACE FUNCTION trigger_fn_insert_new_entry_into_logs ()
@@ -329,7 +335,7 @@ CREATE TABLE notification_emails (
 	recipient_id INT,
 	subject VARCHAR(255),
 	body TEXT
-	);
+);
 
 
 CREATE OR REPLACE FUNCTION trigger_fn_send_email_on_balance_change ()
@@ -339,9 +345,8 @@ AS $$
 BEGIN 
 	INSERT INTO notification_emails (recipient_id, subject, body)
 	VALUES
-		(new.account_id,
-			CONCAT('Balance change for account: ', new.account_id), CONCAT('On ', CURRENT_DATE, 
-				' your balance was changed from ', old.balance, ' to ', new.balance, '.'));
+		(new.account_id, CONCAT('Balance change for account: ', new.account_id),
+			CONCAT('On ', CURRENT_DATE, ' your balance was changed from ', old.balance, ' to ', new.balance, '.'));
 
 	RETURN NEW;
 END;

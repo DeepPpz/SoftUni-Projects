@@ -237,7 +237,7 @@ CREATE TABLE monasteries (
 	CONSTRAINT fk_monasteries_countries
 		FOREIGN KEY (country_code)
 		REFERENCES countries (country_code)
-	);
+);
 
 
 INSERT INTO monasteries (monastery_name, country_code)
@@ -263,11 +263,13 @@ VALUES
 
 
 ALTER TABLE countries
-ADD COLUMN three_rivers BOOLEAN DEFAULT FALSE;
+	ADD COLUMN three_rivers BOOLEAN DEFAULT FALSE;
 
 
-UPDATE countries c
-SET three_rivers = TRUE
+UPDATE
+	countries c
+SET
+	three_rivers = TRUE
 WHERE (
 	SELECT
 		COUNT(*)
@@ -293,9 +295,12 @@ ORDER BY
 
 
 -- 17. Monasteries by Continents and Countries.
-UPDATE countries
-SET country_name = 'Burma'
-WHERE country_name = 'Myanmar';
+UPDATE
+	countries
+SET
+	country_name = 'Burma'
+WHERE
+	country_name = 'Myanmar';
 
 
 INSERT INTO monasteries (monastery_name, country_code)
