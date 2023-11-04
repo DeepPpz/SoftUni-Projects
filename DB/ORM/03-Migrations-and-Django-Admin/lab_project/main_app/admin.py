@@ -15,7 +15,7 @@ class ProductAdmin(admin.ModelAdmin):
             'fields': ('name', 'description', 'price', 'barcode')
         }),
         ('Categorization', {
-            'fields': ('cateogory', 'supplier')
+            'fields': ('category', 'supplier')
         }),
     )
     date_hierarchy = ('created_on')
