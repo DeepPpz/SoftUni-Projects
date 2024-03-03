@@ -13,7 +13,6 @@ Here you can find various solutions for the SoftUni Python Web Development:
     - Python Web (in progress):
         - Django Basics;
         - Django Advanced;
-    - JS Front-End (coming later this year);
 
 
 You can also find solutions to the Open courses:
